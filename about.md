@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Study at Chungnam National University, Republic of Korea. 
-Major is Computer Science & Engineering. 
+Study at Chungnam National University, Republic of Korea.   Major is Computer Science & Engineering. 
 
 ### More Information
 
