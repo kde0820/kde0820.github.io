@@ -45,6 +45,7 @@ ReactDOM.render(<App/>, document.getElementById('root'));
 
 ## Props
 - 변동되지 않는 데이터
+
 ```
 class Codelab extends React.component {
   render(){
