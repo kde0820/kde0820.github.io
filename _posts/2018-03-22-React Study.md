@@ -21,6 +21,52 @@ inflearn 강좌 "React & Express를 이용한 웹 어플리케이션 개발하�
 - VIEW ONLY
 - IE8 이하 지원 X
 
+> React 기본 구조
+```
+class Codelab extends React.component {
+  render(){
+    return(
+      <div>Codelab</div>
+     );
+  }
+}
+
+class App extends React.component {
+  render(){
+    return(
+      <Codelab/>
+     );
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+```
+
+## Props
+- 변동되지 않는 데이터
+```
+class Codelab extends React.component {
+  render(){
+    return(
+      <div>
+        <h1>Hello {this.props.name}</h1>
+        <div>{this.props.children}</div>
+      </div>
+     );
+  }
+}
+
+class App extends React.component {
+  render(){
+    return(
+      <Codelab name="velopert">여기 있는 내용</Codelab>
+     );
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));
+```
+
 ## State
 - 유동적인 데이터
 - 초기값 설정 필수 생성자에서 this.state = {} 으로 설정
@@ -59,6 +105,60 @@ class App extends React.Component {
   render() {
     return(
       <Counter/>
+    );
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+```
+
+## Component Mapping
+- javascript Map 사용
+- map() : 파라미터로 전달된 함수를 통하여 배열 내의 각 요소를 처리해서 그 결과로 새로운 배열을 생성함
+
+```
+class Contactinfo extends React.Component {
+  render() {
+    return(
+      <div>{this.props.contact.name}  {this.props.contact.phone}</div>
+    );
+  }
+}
+
+class Contact extends React.Component {
+  
+  constructor(props){
+    super(props);
+    this.state = {
+      contactData: [
+        {name: 'Albert', phone: '010-0000-0001'},
+        {name: 'Albert2', phone: '010-0000-0002'},
+        {name: 'Albert3', phone: '010-0000-0003'},
+        {name: 'Albert4', phone: '010-0000-0004'}
+      ]
+    }
+  }
+  render() {
+    /* 상수 */
+    const mapToComponent = (data) => {
+        return data.map((contact,i) => {
+          return (<Contactinfo contact={contact} key={i}/>);
+        });
+    };
+    
+    
+    return(
+      <div>
+        {mapToComponent(this.state.contactData)}
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return(
+      <Contact/>
     );
   }
 }
