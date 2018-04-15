@@ -9,7 +9,7 @@ Major is Computer Science & Engineering.
 
 ### More Information
 
-https://www.linkedin.com/in/daeun-kim-16559b14a/
+<https://www.linkedin.com/in/daeun-kim-16559b14a>
 
 ### Contact me
 
