@@ -22,6 +22,7 @@ inflearn 강좌 "React & Express를 이용한 웹 어플리케이션 개발하�
 - IE8 이하 지원 X
 
 > React 기본 구조
+
 ```
 class Codelab extends React.component {
   render(){
