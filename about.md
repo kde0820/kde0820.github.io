@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Study at Chungnam National University, Republic of Korea. 
+Major is Computer Science & Engineering. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+https://www.linkedin.com/in/daeun-kim-16559b14a/
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[kde0820@naver.com](mailto:kde0820@naver.com)
