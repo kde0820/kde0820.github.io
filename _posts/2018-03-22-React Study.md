@@ -19,3 +19,47 @@ inflearn 강좌 "React & Express를 이용한 웹 어플리케이션 개발하�
 - VIEW ONLY
 - IE8 이하 지원 X
 
+## State
+- 유동적인 데이터
+- 초기값 설정 필수 생성자에서 this.state = {} 으로 설정
+
+```
+class Counter extends React.Component {
+  
+  /* 생성자 */
+  constructor(props){
+    super(props);
+    /* state 초기값 설정 */
+    this.state = {
+      value: 0
+    };
+    /* 이거 안해주면 작동 X */
+    this.handleClick = this.handleClick.bind(this)
+  }
+  
+  handleClick(){
+    this.setState({
+      value: this.state.value + 1
+    });
+  }
+  
+  render() {
+    return(
+      <div>
+        <h2>{this.state.value}</h2>
+        <button onClick={this.handleClick}>Press Me</button>
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return(
+      <Counter/>
+    );
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+```
