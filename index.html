@@ -5,7 +5,17 @@ layout: default
   a {
     color: black;
   }
-  
+  a:hover {
+    color: white;
+  }
+
+  article.post {
+  padding: 0 10px;
+  }
+
+  article.post:hover {
+    background-color: #cececece;
+  }
 </style>
 <div class="posts">
   {% for post in site.posts %}
