@@ -1,9 +1,19 @@
 ---
-layout: default
+layout: page
 ---
+<div class="posts">
+  {% for post in site.categories.Algorithm %}
+    <article class="post">
 
-<ul>
-	{% for post in site.categories.Algorithm %}
-	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+      <a href="{{ post.url }}"><h1>{{ post.title }}</h1>
+        <div class="date">
+          {{ post.date | date: "%B %e, %Y" }}
+        </div>
+  
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</div>
