@@ -5,8 +5,7 @@ permalink: /category/
 ---
 
 <div class="post">
-	<h1 class="pageTitle">Categories</h1>
 	<ul>
-		<li><a href="./category/Algorithm.html">Algorithm</a></li>
+		<li><a href="./Algorithm.html">Algorithm</a></li>
 	</ul>
 </div>
