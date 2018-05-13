@@ -6,6 +6,6 @@ permalink: /category/
 
 <div class="post">
 	<ul>
-		<li><a href="./Algorithm.html">Algorithm</a></li>
+		<li><a href="./Algorithm">Algorithm</a></li>
 	</ul>
 </div>
