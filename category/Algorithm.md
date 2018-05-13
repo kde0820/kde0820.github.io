@@ -1,6 +1,21 @@
 ---
 layout: page
 ---
+<style>
+  a {
+    color: black;
+  }
+  a:hover {
+    color: white;
+  }
+  article.post {
+  padding: 0 20px;
+  }
+  article.post:hover {
+    background-color: #cececece;
+  }
+</style>
+
 <div class="posts">
   {% for post in site.categories.Algorithm %}
     <article class="post">
