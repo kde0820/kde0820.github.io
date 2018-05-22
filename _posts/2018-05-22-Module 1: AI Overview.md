@@ -4,6 +4,7 @@ title: "Module 1: AI Overview"
 comments: true
 categories: D-DS Academy
 ---
+D-DS Academy 온라인 사전교육
 
 # Data Science
 데이터 중심의 과학, 데이터에서 지식과 통찰력을 발견하는 과학적인 방법론
