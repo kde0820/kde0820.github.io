@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [C++] pointer vs reference
+title: '[C++] pointer vs reference'
 comments: true
 categories: Study
 ---
