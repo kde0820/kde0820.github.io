@@ -1,18 +1,21 @@
 ---
 layout: default
 ---
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
 <style>
   a {
     color: black;
   }
   article.post {
-  padding: 0 20px;
+    padding: 0 20px;
+    font-family: 'Nanum Gothic', sans-serif;
   }
 
   article.post:hover {
     background-color: #cececece;
   }
 </style>
+
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
