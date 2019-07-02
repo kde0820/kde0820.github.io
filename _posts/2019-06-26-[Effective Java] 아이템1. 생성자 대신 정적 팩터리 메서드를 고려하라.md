@@ -3,7 +3,7 @@ layout: post
 title: [Effective Java] 아이템1. 생성자 대신 정적 팩터리 메서드를 고려하라
 comments: true
 categories: Study
----  
+---
 Effective Java 3판을 공부하며 배운 내용 정리  
   
 # 2장
