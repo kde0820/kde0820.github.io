@@ -27,7 +27,7 @@ Mosaic create(Supplier<? extends Tile> tile Factory) { ... }
 ## Supplier<T>
 - 인자는 받지 않으며 리턴값만 존재하는 메서드를 갖고 있음  
 - 이 메서드들을 실행하면 호출한 곳으로 데이터를 공급하는 역할을 함
-- 참고: [Java 8 docs](https://docs.oracle.com/javase/8/docs/api/)
+- 참고: [Java 8 docs](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
 ```java
 Supplier<String> s = () -> "Hello, World!";
 String result = s.get();
