@@ -5,7 +5,7 @@ comments: true
 categories: Study
 ---
 Effective Java 3판을 공부하며 배운 내용 정리  
-  
+
 # 2장
 - 객체를 만들어야 할 때와 만들지 말아야 할 때를 구분하는 법
 - 올바른 객체 생성 방법과 불필요한 생성을 피하는 방법
