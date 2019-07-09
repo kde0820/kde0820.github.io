@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Study
-permalink: /study/
+permalink: /category/Study
 ---
 <style>
   a {
