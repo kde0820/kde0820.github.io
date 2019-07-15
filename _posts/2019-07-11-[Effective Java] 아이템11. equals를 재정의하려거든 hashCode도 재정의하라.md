@@ -56,3 +56,28 @@ System.out.println(m.get(new PhoneNumber(707, 867, 5309))); // null
 - 파생 필드(다른 필드로부터 계산해낼 수 있는 필드)는 제외해도 된다.
 - equals 비교에 사용되지 않은 필드는 반드시 제외해야 한다.
 - `31 * result`는 필드를 곱하는 순서에 따라 result 값이 달라지게 한다. 곱할 숫자를 31로 정한 이유는 홀수이면서 소수이기 때문이다.
+
+# 주의사항
+- 클래스가 불변이고 해시코드를 계산하는 비용이 크다면, 캐싱을 고려해야 한다.
+   - 객체가 주로 해시의 키로 사용될 것 같다면 인스턴스가 만들어질 때 해시코드를 계산해둬야 한다.
+   - 그렇지 않은 경우라면 hashCode가 처음 불릴대 계산하는 **지연 초기화** 전략을 사용해보자.
+```java
+private int hashCode; // 자동으로 0으로 초기화된다.
+
+@Override public int hashCode() {
+      int result = hashCode;
+      if (result == 0) {
+         result = Short.hashCode(areaCode);
+         result = 31 * result + Short.hashCode(prefix);
+         result = 31 * result + Short.hashCode(lineNum);
+         hashCode = result;
+      }
+      return result;
+}
+```
+
+- 성능을 높인다고 해시코드를 계산할 때 핵심 필드를 생략해서는 안된다.
+   - 해시 품질이 나빠져 해시테이블의 성능을 심각하게 떨어뜨릴 수도 있다.
+
+- hashCode가 반환하는 값의 생성 규칙을 API 사용자에게 자세히 공표하지 말자.
+   - 그렇게 해야 클라이언트가 이 값에 의지하지 않게 되고, 추후에 계산 방식을 바꿀 수도 있다.
