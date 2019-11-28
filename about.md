@@ -80,7 +80,7 @@ permalink: /about/
   
 # 자격증
 - SQLD
-- ISTQB
+- ISTQB CTFL
 - 정보처리기사
 
 # 활용 가능 언어 및 도구
